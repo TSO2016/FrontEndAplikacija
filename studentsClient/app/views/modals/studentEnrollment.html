@@ -1,0 +1,30 @@
+<div class="modal-header">
+  <h3 class="modal-title">Dodavanje studenta</h3>
+</div>
+<div class="modal-body-datepicker">
+  <label for="students">student</label>
+  <select id="students" class="form-control" ng-model="student" ng-options="s.firstName + ' ' + s.lastName + ' ' + s.cardNumber for s in students"></select>
+  <label for="start">početak</label>
+  <p class="input-group">
+    <input id="pocetak" type="text" class="form-control" uib-datepicker-popup="dd.MM.yyyy."
+      ng-model="enrollment.startDate" close-text="Close" is-open="startDate.opened" ng-required="true" />
+    <span class="input-group-btn">
+      <button type="button" class="btn btn-default" ng-click="openStartDate()">
+        <i class="glyphicon glyphicon-calendar"></i>
+      </button>
+    </span>
+  </p>
+  <p class="input-group">
+    <input id="pocetak" type="text" class="form-control" uib-datepicker-popup="dd.MM.yyyy."
+      ng-model="enrollment.endDate" close-text="Close" is-open="endDate.opened" ng-required="true" />
+    <span class="input-group-btn">
+      <button type="button" class="btn btn-default" ng-click="openEndDate()">
+        <i class="glyphicon glyphicon-calendar"></i>
+      </button>
+    </span>
+  </p>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-default" type="button" ng-click="ok()">OK</button>
+  <button class="btn btn-default" type="button" ng-click="cancel()">Cancel</button>
+</div>

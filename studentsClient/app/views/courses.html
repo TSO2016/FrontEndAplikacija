@@ -1,0 +1,28 @@
+<div>
+  <h3>Studenti</h3>
+</div>
+<table class="table table-bordered">
+  <tr>
+    <th>naziv</th>
+    <th>akcija</th>
+  </tr>
+  <tr ng-repeat="course in courses">
+    <td>
+      {{course.name}}
+    </td>
+    <td>
+      <button type="button" class="btn btn-default" aria-label="Izmena" ng-click="openModal(course)">
+        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+      </button>
+
+      <button type="button" class="btn btn-default" aria-label="Brisanje" ng-click="deleteCourse(course.id)">
+        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+      </button>
+    </td>
+  </tr>
+</table>
+<div class="right">
+  <button type="button" class="btn btn-default" aria-label="Dodavanje" ng-click="openModal()">
+    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+  </button>
+</div>

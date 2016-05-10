@@ -1,0 +1,36 @@
+<div>
+  <h3>Studenti</h3>
+</div>
+<table class="table table-bordered">
+  <tr>
+    <th>indeks</th>
+    <th>ime</th>
+    <th>prezime</th>
+    <th>akcija</th>
+  </tr>
+  <tr ng-repeat="student in students">
+    <td>
+      {{student.cardNumber}}
+    </td>
+    <td>
+      {{student.firstName}}
+    </td>
+    <td>
+      {{student.lastName}}
+    </td>
+    <td>
+      <button type="button" class="btn btn-default" aria-label="Izmena" ng-click="openModal(student)">
+        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+      </button>
+
+      <button type="button" class="btn btn-default" aria-label="Brisanje" ng-click="deleteStudent(student.id)">
+        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+      </button>
+    </td>
+  </tr>
+</table>
+<div class="right">
+  <button type="button" class="btn btn-default" aria-label="Dodavanje" ng-click="openModal()">
+    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+  </button>
+</div>

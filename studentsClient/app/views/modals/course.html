@@ -1,0 +1,31 @@
+<div class="modal-header">
+  <h3 class="modal-title">Kurs</h3>
+</div>
+<div class="modal-body">
+  <form>
+    <fieldset class="form-group">
+      <label for="name">name</label>
+      <input type="text" class="form-control" id="name" ng-model="course.name">
+    </fieldset>
+  </form>
+  <label for="students">students</label>
+    <table id="students" class="table table-bordered">
+      <tr ng-repeat="enrollment in enrollments">
+        <td>
+          {{enrollment.student.firstName}} {{enrollment.student.lastName}} {{enrollment.student.cardNumber}}
+          <button type="button" class="btn btn-default right" aria-label="Brisanje" ng-click="deleteEnrollment(enrollment.id)">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+          </button>
+        </td>
+      </tr>
+    </table>
+    <span class="right">
+      <button type="button" class="btn btn-default" aria-label="Dodavanje"  ng-click="openModal(course)">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      </button>
+    </span>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-default" type="button" ng-click="ok()">OK</button>
+  <button class="btn btn-default" type="button" ng-click="cancel()">Cancel</button>
+</div>
