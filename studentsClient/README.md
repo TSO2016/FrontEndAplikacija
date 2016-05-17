@@ -2,6 +2,14 @@
 
 Front end aplikacija za predmet Tehnolgoije i sistemi eObrazovanja
 
+## Instaliranje okruženja
+
+* instalirati Node.js
+* npm install grunt-cli -g
+* npm install bower -g
+* instalirati Ruby
+* gem install compass
+
 ## Pokretanje aplikacije
 
 *Postaviti dist u Gruntfile.js na putanju do static foldera u Spring Boot aplikaciji
